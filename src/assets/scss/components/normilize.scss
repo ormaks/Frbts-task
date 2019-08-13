@@ -349,6 +349,7 @@ template {
   display: none;
 }
 
+/*Some custom additional styles*/
 p, a, span, ul, li, button, input, textarea {
   margin: 0;
   padding: 0;
@@ -358,4 +359,14 @@ p, a, span, ul, li, button, input, textarea {
 a {
   color: #201f7a;
   text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fafafa;
+  color: #262626;
+}
+
+img {
+  display: block;
 }
