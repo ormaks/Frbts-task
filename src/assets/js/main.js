@@ -1,7 +1,6 @@
 $(document).ready(function () {
-    var nearToBottom = 200;
-    var photosBlock = $('#photos_block-js');
-
+    let nearToBottom = 200;
+    let photosBlock = $('#photos_block-js');
     $(window).scroll(function () {
         if ($(window).scrollTop() + $(window).height() >
             $(document).height() - nearToBottom) {
@@ -34,3 +33,91 @@ $(document).ready(function () {
         }
     });
 });
+
+
+function convert(num) {
+    let string = num.toString(), chunksLen, chunk, ints, i, word, words;
+    if (num === 0) {
+        return 'zero';
+    }
+
+    const units = ['',
+        'one',
+        'two',
+        'three',
+        'four',
+        'five',
+        'six',
+        'seven',
+        'eight',
+        'nine',
+        'ten',
+        'eleven',
+        'twelve',
+        'thirteen',
+        'fourteen',
+        'fifteen',
+        'sixteen',
+        'seventeen',
+        'eighteen',
+        'nineteen'
+    ];
+
+    const tens = ['',
+        '',
+        'twenty',
+        'thirty',
+        'forty',
+        'fifty',
+        'sixty',
+        'seventy',
+        'eighty',
+        'ninety'];
+
+    const scales = ['',
+        'thousand',
+        'million',
+        'billion',
+        'trillion',
+        'quadrillion',
+        'quintillion',
+        'sextillion',
+        'septillion',
+        'octillion',
+        'nonillion',
+        'decillion',
+        'undecillion',
+        'duodecillion',
+        'tredecillion',
+        'quatttuor-decillion',
+        'quindecillion',
+        'sexdecillion',
+        'septen-decillion',
+        'octodecillion',
+        'novemdecillion',
+        'vigintillion',
+        'centillion'
+    ];
+
+    let start = string.length;
+    let end;
+    let chunks = [];
+
+    while (start > 0) {
+        end = start;
+        chunks.push(string.slice((start = Math.max(0, start - 3)), end));
+        console.log(start);
+    }
+
+    console.log(end, 'end');
+    console.log(chunks, 'chunks');
+
+    chunksLen = chunks.length;
+    if (chunksLen > scales.length) {
+        return '';
+    }
+
+
+}
+
+// console.log(convert(23459));

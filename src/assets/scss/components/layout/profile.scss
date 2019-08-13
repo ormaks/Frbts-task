@@ -91,7 +91,7 @@
             flex-basis: 0;
             flex-grow: 1;
             margin-left: 0;
-            max-width: 230px;
+            max-width: 250px;
           }
         }
       }
@@ -198,7 +198,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           color: white;
-          font-size: 30px;
+          font-size: 26px;
           z-index: 1;
           @media (max-width: 480px) {
             font-size: 20px;

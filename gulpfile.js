@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync').create(),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    babel = require('gulp-babel');
 
 gulp.task('start', ['scss'], function () {
     browserSync.init({
@@ -33,10 +34,10 @@ gulp.task('html', function () {
 //JS
 gulp.task('js', function () {
     return gulp.src([
-        './node_modules/jquery/dist/jquery.min.js',
-        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './node_modules/jquery/dist/jquery.js',
         'src/assets/js/main.js'
     ])
+        .pipe(babel())
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('public/assets/js'))
