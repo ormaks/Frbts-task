@@ -10,7 +10,7 @@ When a bank- or lottery check is printed, the amount is usually printed with bot
 letters. Your job is to write the algorithm that converts an amount to the alphabetical
 representation.
 
-[See a demo](https://ormaks.github.io/Frbts-task/public/index.html)
+[See a demo](https://ormaks.github.io/Frbts-task/public/algorithm.html)
 
 ## Getting Started
 
