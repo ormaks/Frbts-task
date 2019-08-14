@@ -1,0 +1,38 @@
+.algorithm_content {
+  &-title {
+    text-align: center;
+  }
+
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 60px;
+  }
+
+  &-input {
+    width: 40%;
+    border: 1px solid #C1C1C1;
+    padding: 10px 20px;
+    min-height: 100%;
+  }
+
+  &-btn {
+    width: 20%;
+    background: none;
+    min-height: 100%;
+    border: 1px solid #C1C1C1;
+
+    &:hover {
+      background: #C1C1C1;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  &-answer {
+    width: 40%;
+    border: 1px solid #C1C1C1;
+    padding: 10px;
+    min-height: 100%;
+  }
+}
