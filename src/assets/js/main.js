@@ -129,7 +129,7 @@ function convert(num) {
     for (let i = 0; i < chunksLen; i++) {
         chunk = parseInt(chunks[i]);
         if (chunk) {
-            ints = chunks[i].split('').reverse();
+            ints = chunks[i].split('').reverse().map(parseFloat);
             if (ints[1] === 1) {
                 ints[0] += 10;
             }
@@ -154,3 +154,5 @@ function convert(num) {
     }
     return words.reverse().join(' ');
 }
+
+console.log(convert(123214));
